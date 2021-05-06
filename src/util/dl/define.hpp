@@ -1,3 +1,4 @@
+/*
 #pragma once
 #define uCLSSPEC     void*
 #define QUERYCONTEXT void*
@@ -39,3 +40,5 @@ struct IXMLElement
 #define __RPC__inout_xcount(c)
 #define __RPC__inout_ecount_full(c)
 #define __RPC__out_ecount(c) 
+
+*/

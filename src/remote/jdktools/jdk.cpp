@@ -5,5 +5,5 @@ bool jdktools::InstallJdk() {
 }
 
 bool jdktools::CheckJdk() {
-
+	return true;
 }
