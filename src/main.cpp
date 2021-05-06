@@ -34,5 +34,10 @@ int main(int argc, char** argv) {
 		settings.forceCompilation = true;
 #pragma endregion
 
+	std::cout << "[>] welcome to paralell installer ]\n";
+	std::cout << "[i] initializing...\n";
 	util::createGradle();
+	std::cout << "[+] gradle wrapper present\n";
+	std::cout << "[;] starting compilation\n";
+	compile::compile();
 }

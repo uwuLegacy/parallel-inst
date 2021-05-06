@@ -7,6 +7,7 @@ bool util::TestConnection() {
 	}
 	else {
 		std::cout << "[+] Connection check successful.\n";
+		return true;
 	}
 }
 
@@ -20,7 +21,7 @@ void util::ShowHelp() {
 
 bool util::createGradle() {
 	try {
-		std::ofstream script("gradle.bat");
+		std::ofstream script("gradlew.bat");
 #pragma region"gradle script"
 		const char* scriptText = R"""(
 @if "%DEBUG%" == "" @echo off
