@@ -1,28 +1,4 @@
-#include "util.hpp"
 
-bool util::TestConnection() {
-	if (!InternetCheckConnectionA("http://github.com", FLAG_ICC_FORCE_CONNECTION, 0)) {
-		std::cout << "[-] Connection unavailable, are you connected to the Internet?\n";
-		return false;
-	}
-	else {
-		std::cout << "[+] Connection check successful.\n";
-	}
-}
-
-void util::ShowHelp() {
-	std::cout << "      [ RatPoison Installer Help ]\n"
-		<< "--skipJdkCheck (-s) - Skips checking for installed JDK\n"
-		<< "--forceUpdate (-U) - Forces cheat update from remote repo\n"
-		<< "--forceCompile (-C) - Forces cheat recompilation\n"
-		<< std::endl;
-}
-
-bool util::createGradle() {
-	try {
-		std::ofstream script("gradle.bat");
-#pragma region"gradle script"
-		const char* scriptText = R"""(
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem
@@ -107,14 +83,4 @@ exit /b 1
 if "%OS%"=="Windows_NT" endlocal
 
 :omega
-	)""";
-#pragma endregion
-		script << scriptText;
-	}
-	catch (std::exception& err) {
-		std::cout << "[-] Error while creating gradle script: " << err.what() << '\n';
-		return false;
-	}
-	return true;
-
-}
+	

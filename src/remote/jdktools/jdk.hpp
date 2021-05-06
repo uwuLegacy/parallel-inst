@@ -1,5 +1,5 @@
 #pragma once
-#include "../framework.hpp"
+#include "../../framework.hpp"
 
 namespace jdktools {
 	bool InstallJdk();

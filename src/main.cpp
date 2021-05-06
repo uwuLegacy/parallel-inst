@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 		.help("Forces cheat update")
 		.default_value(false)
 		.implicit_value(true);
-	parser.add_argument("--forceCompile", "-C")
+	parser.add_argument("--forceCompilation", "-C")
 		.help("Forces cheat compilation")
 		.default_value(false)
 		.implicit_value(true);
@@ -34,5 +34,5 @@ int main(int argc, char** argv) {
 		settings.forceCompilation = true;
 #pragma endregion
 
-
+	util::createGradle();
 }

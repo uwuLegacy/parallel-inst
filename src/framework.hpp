@@ -9,6 +9,7 @@
 #include <string_view>  // std::string_view
 #include <variant>      // std::variant
 #include <vector>       // std::vector
+#include <fstream>      // std::ofstream
 
 // WinAPI
 #include <windows.h>
@@ -18,6 +19,6 @@
 
 // Local
 #include "compile/compile.hpp"
-#include "jdktools/jdk.hpp"
+#include "remote/jdktools/jdk.hpp"
 #include "util/util.hpp"
 #include "settings/settings.hpp"
