@@ -1,7 +1,7 @@
 #pragma once
 #include "../framework.hpp"
 
-struct CSettings {
+struct settings_t {
 	// link to x86 jdk
 	char* remoteJdkX86{};
 	// link to x64 jdk
@@ -14,4 +14,8 @@ struct CSettings {
 	bool forceUpdate{};
 	// option to force compilation
 	bool forceCompilation{};
-};
+}; inline settings_t settings;
+
+namespace args {
+	void setup(int argc, char** argv);
+}

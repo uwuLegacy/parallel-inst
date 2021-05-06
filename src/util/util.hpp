@@ -8,4 +8,6 @@ namespace util {
 	bool TestConnection();
 	void ShowHelp();
 	bool createGradle();
+	bool DirectoryExists(const char* szPath);
+	bool Prompt(const char* szPrompt);
 }

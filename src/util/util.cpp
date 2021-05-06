@@ -111,11 +111,31 @@ if "%OS%"=="Windows_NT" endlocal
 	)""";
 #pragma endregion
 		script << scriptText;
+		std::cout << "[+] gradle wrapper present\n";
 	}
 	catch (std::exception& err) {
 		std::cout << "[-] Error while creating gradle script: " << err.what() << '\n';
 		return false;
 	}
 	return true;
+}
 
+bool util::DirectoryExists(const char* szPath) {
+	DWORD dwAttrib = GetFileAttributesA(szPath);
+
+	return (dwAttrib != INVALID_FILE_ATTRIBUTES &&
+		(dwAttrib & FILE_ATTRIBUTE_DIRECTORY));
+}
+
+bool util::Prompt(const char* szPrompt) {
+	while (true) {
+		std::cout << szPrompt << " [y/n] ";
+		std::string line;
+		if (!std::getline(std::cin, line)) {
+			throw std::runtime_error("unexpected input error");
+		}
+		else if (line.size() == 1 and line.find_first_of("YyNn") != line.npos) {
+			return line == "Y" || line == "y";
+		}
+	}
 }
