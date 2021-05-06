@@ -152,6 +152,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\remote\repo\repo.cpp" />
     <ClCompile Include="src\settings\settings.cpp" />
+    <ClCompile Include="src\util\dl\dl.cpp" />
     <ClCompile Include="src\util\util.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +161,8 @@
     <ClInclude Include="src\framework.hpp" />
     <ClInclude Include="src\remote\jdktools\jdk.hpp" />
     <ClInclude Include="src\settings\settings.hpp" />
+    <ClInclude Include="src\util\dl\define.hpp" />
+    <ClInclude Include="src\util\dl\dl.hpp" />
     <ClInclude Include="src\util\util.hpp" />
   </ItemGroup>
   <ItemGroup>
