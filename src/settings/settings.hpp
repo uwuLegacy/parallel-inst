@@ -11,7 +11,7 @@ struct CSettings {
 	// option to skip check for jdk
 	bool skipJdkCheck{};
 	// option to force update
-	bool forceCheatUpdate{};
+	bool forceUpdate{};
 	// option to force compilation
 	bool forceCompilation{};
 };

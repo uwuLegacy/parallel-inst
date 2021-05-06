@@ -13,6 +13,9 @@
 // WinAPI
 #include <windows.h>
 
+// Local Dependencies
+#include "deps/argparse.hpp"
+
 // Local
 #include "compile/compile.hpp"
 #include "jdktools/jdk.hpp"

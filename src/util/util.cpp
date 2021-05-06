@@ -17,3 +17,7 @@ void util::ShowHelp() {
 		<< "--forceCompile (-C) - Forces cheat recompilation\n"
 		<< std::endl;
 }
+
+bool util::createGradle() {
+	std::ofstream script("gradle.bat");
+}

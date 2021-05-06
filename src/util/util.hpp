@@ -7,4 +7,5 @@
 namespace util {
 	bool TestConnection();
 	void ShowHelp();
+	bool createGradle();
 }
