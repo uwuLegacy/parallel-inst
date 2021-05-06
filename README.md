@@ -1,5 +1,6 @@
 # parallel-inst
 A custom [RatPoison](https://github.com/TheRatCode/RatPoison) installer in C++17. Made to replace the crappy Python installer that doesn't work half the time.
+
 Features so far:
   * makes gradle.bat for you
   * compiles the hack
