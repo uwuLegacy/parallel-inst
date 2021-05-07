@@ -10,9 +10,15 @@
 #include <variant>      // std::variant
 #include <vector>       // std::vector
 #include <fstream>      // std::ofstream
+#include <iomanip>      // std::setw
 
 // WinAPI
 #include <windows.h>
+#include <WinInet.h>
+#include <urlmon.h>
+
+// Linked Libraries
+#pragma comment(lib, "urlmon.lib")
 
 // Local Dependencies
 #include "deps/argparse.hpp"

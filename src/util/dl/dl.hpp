@@ -1,7 +1,5 @@
 #pragma once
 #include "../../framework.hpp"
-#include <WinInet.h>
-#include <iomanip>
 
 namespace dlmgr {
 
