@@ -3,4 +3,5 @@
 
 namespace repo {
 	std::string getBuildVersion();
+	bool DownloadBranch(std::string szBranchName);
 }

@@ -29,3 +29,4 @@
 #include "util/util.hpp"
 #include "settings/settings.hpp"
 #include "util/dl/dl.hpp"
+#include "remote/repo/repo.hpp"
