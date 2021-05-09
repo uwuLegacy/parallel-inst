@@ -10,4 +10,5 @@ namespace util {
 	bool createGradle();
 	bool DirectoryExists(const char* szPath);
 	bool Prompt(const char* szPrompt);
+	std::string execute(const char* cmd);
 }

@@ -12,3 +12,7 @@ Updates planned and random notes:
   * change branches tech
   * pull updates from selected branch 
   * store selected branch and other stuff in registry? .ini file? .json file? i wanna use registry cuz then its single file i think
+
+Dependencies used:
+  * [argparse](https://github.com/p-ranav/argparse)
+  * [some zip library](https://www.codeproject.com/Articles/7530/Zip-Utils-Clean-Elegant-Simple-Cplusplus-Win)

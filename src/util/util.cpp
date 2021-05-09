@@ -139,3 +139,23 @@ bool util::Prompt(const char* szPrompt) {
 		}
 	}
 }
+
+/// <summary>
+/// very bad function this is so bad i hate it fuck fuck fuck you but i dont want to use some fucking git library thats like 200 mb and requires external linking
+/// fuc this :sob: :sob: :sob:
+/// </summary>
+/// <param name="cmd"> - The command to execute.</param>
+/// <returns>The command result.</returns>
+std::string util::execute(const char* cmd) {
+	std::array<char, 128> buffer;
+	std::string res;
+	std::unique_ptr<FILE, decltype(&_pclose)> pipe(_popen(cmd, "r"), _pclose);
+	if (!pipe) {
+		std::cout << "[!] FATAL - popen() failed (util::execute)\n";
+		throw std::runtime_error("popen() failed");
+	}
+	while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+		res += buffer.data();
+	}
+	return res;
+}

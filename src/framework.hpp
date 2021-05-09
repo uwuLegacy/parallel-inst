@@ -11,6 +11,9 @@
 #include <vector>       // std::vector
 #include <fstream>      // std::ofstream
 #include <iomanip>      // std::setw
+#include <cstdio>       // popen()
+#include <array>        // std::array
+#include <stdexcept>    // std::runtime_error
 
 // WinAPI
 #include <windows.h>
