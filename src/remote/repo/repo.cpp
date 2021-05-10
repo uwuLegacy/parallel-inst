@@ -14,6 +14,7 @@ std::string repo::getVersion() {
 		std::string curVersion;
 		std::getline(curVersionFile, curVersion);
 	}
+	return ;
 }
 /// <summary>
 /// Downloads the branch to a subdirectory.

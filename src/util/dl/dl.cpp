@@ -35,9 +35,11 @@ void dlmgr::download(char* url, char* path) {
 }
 
 void dlmgr::download(const char* url, const char* path) {
+#ifdef _DEBUG
 	std::cout << "[d] downloading started\n";
 	std::cout << "[d] url: " << url << '\n';
 	std::cout << "[d] path: " << path << '\n';
+#endif
 	DeleteUrlCacheEntryA(url);
 	CallbackHandler cbHandler;
 	IBindStatusCallback* pBindStatusCallback = NULL;
@@ -49,6 +51,6 @@ void dlmgr::download(const char* url, const char* path) {
 		0,
 		pBindStatusCallback);
 	if (SUCCEEDED(hr)) {
-		std::cout << "[d] download successful\n";
+		std::cout << "[+] download finished\n";
 	}
 }
